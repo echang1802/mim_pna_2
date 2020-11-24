@@ -26,11 +26,11 @@ custom = {
     'demands' : [500, 1000, 800, 1500, 600, 1900],
     'configuration': [
          [1,0,0,0],
-         [0,1,0,0],
-         [0,0,1,0],
+         [0,1,1,0],
          [0,0,0,1],
-         [1,1,1,0],
-         [0,1,1,1]
+         [1,0,1,0],
+         [0,1,0,0],
+         [0,0,1,1]
     ]  # RELLENAR
 }
 
@@ -50,7 +50,7 @@ print('Flexibilidad plena')
 print('Ventas: %.2f' % (sum(sales) / len(sales)))
 print('Ventas: %.2f' % np.std(sales))
 print('Utilizacion: %.2f' % (sum(utilizaciones) / len(utilizaciones)))
-print('P(Ventas=6300): %.2f' % (sum(es_6300) / len(es_6300)))
+sprint('P(Ventas=6300): %.2f' % (sum(es_6300) / len(es_6300)))
 
 # Devuelve observaciones de la forma [[ventas_1, utilizacion_1], ..., [ventas_N, utilizacion_N]]
 observations = simulate(custom, poisson_demand_sampler, 10000)
